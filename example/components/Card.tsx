@@ -4,7 +4,7 @@ import { GnosisSafe } from '@web3-react/gnosis-safe'
 import { MetaMask } from '@web3-react/metamask'
 import { Network } from '@web3-react/network'
 import { WalletConnect as WalletConnectV2 } from '@web3-react/walletconnect-v2'
-
+import { BitKeep } from '@web3-react/bitkeep'
 import { getName } from '../utils'
 import { Accounts } from './Accounts'
 import { Chain } from './Chain'
@@ -12,7 +12,7 @@ import { ConnectWithSelect } from './ConnectWithSelect'
 import { Status } from './Status'
 
 interface Props {
-  connector: MetaMask | WalletConnectV2 | CoinbaseWallet | Network | GnosisSafe
+  connector: MetaMask | WalletConnectV2 | CoinbaseWallet | Network | GnosisSafe | BitKeep
   activeChainId: ReturnType<Web3ReactHooks['useChainId']>
   chainIds?: ReturnType<Web3ReactHooks['useChainId']>[]
   isActivating: ReturnType<Web3ReactHooks['useIsActivating']>
